@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <style>
+    #Finn {
+      position: relative;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <img id="Finn" src="bis.gif">
+
+
+  <script>
+    Finn.onclick = function() {
+      let start = Date.now();
+
+      let timer = setInterval(function() {
+        let timePassed = Date.now() - start;
+
+        Finn.style.left = timePassed / 5 + 'px';
+
+        if (timePassed > 5100) clearInterval(timer);
+
+      }, 40);
+    }
+  </script>
+
+
+</body>
+
+</html>
